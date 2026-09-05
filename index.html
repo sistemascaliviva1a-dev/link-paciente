@@ -1,388 +1,222 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LINKS VIVA1A IPS</title>
-	
 <link rel="icon" href="https://images.vexels.com/media/users/3/199980/isolated/preview/4c910ee68a0f4fe8029f72e40bc10fe6-icono-de-navegacion-por-internet-trazo-rosa.png">
-	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-/* Estilo para header */
-body {
-  margin: 0; /* Elimina márgenes por defecto */
-  padding: 0; /* Elimina relleno por defecto */
-}
+  :root{
+    --navy: #0e2340;
+    --panel-soft: rgba(10, 24, 48, 0.55);
+    --line: rgba(255,255,255,0.14);
+    --ink: #eef2f8;
+    --ink-dim: #b9c4d6;
 
-header {
-  width: 100%;
-  background-color: white;
-  padding: 10px 0; /* Ajusta el espacio interno vertical */
-  text-align: left;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-}
+    --c-seguridad: #d6416f;
+    --c-seguridad-soft: rgba(214,65,111,0.18);
+  }
 
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
 
-/* Estilo para botones */
+  body{
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+    background-color: #0b3a63;
+    background-image: url('https://iphoneros.com/wp-content/uploads/2015/02/azul_abstracto_ordenador_iphoneroscom.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+  }
 
-.boton {
-  /* Estilos regulares */
-  border: 8px solid #2e518b;
-  padding: 10px;
-  background-color: #2e518b;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
+  body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6,14,30,0.30), rgba(6,14,30,0.40));
+    pointer-events: none;
+    z-index: 0;
+  }
 
-.boton:hover {
-  background-color: #4567a8; /* Cambia el color al pasar el cursor */
-}
+  header, .wrap, footer{
+    position: relative;
+    z-index: 1;
+  }
 
-.boton1 {
-  /* Estilos regulares */
-  border: 8px solid #ff0000;
-  padding: 10px;
-  background-color: #ff0000;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
+  header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding: 14px 28px;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.35);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  header img{ height: 42px; width:auto; }
+  header .tag{
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: var(--navy);
+    border-left: 2px solid #ddd;
+    padding-left: 14px;
+  }
 
-.boton1:hover {
-  background-color: #EC5353; /* Cambia el color al pasar el cursor */
-}
+  .wrap{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 34px 20px 60px;
+  }
 
-.boton2 {
-  /* Estilos regulares */
-  border: 8px solid #04B431;
-  padding: 10px;
-  background-color: #04B431;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
+  .page-title{
+    font-family:'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.15;
+    margin: 0 0 6px;
+  }
+  .page-title span{ color: #7fd6c9; }
+  .page-sub{
+    color: var(--ink-dim);
+    font-size: 14.5px;
+    margin: 0 0 30px;
+  }
 
-.boton2:hover {
-  background-color: #1BCB48; /* Cambia el color al pasar el cursor */
-}
+  .cat-head{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .cat-icon{
+    width: 34px; height: 34px;
+    border-radius: 9px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    background: var(--c-seguridad-soft);
+    color: var(--c-seguridad);
+  }
+  .cat-icon svg{ width:18px; height:18px; }
+  .cat-head h2{
+    font-family:'Manrope', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+  }
 
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
-.boton3 {
-  /* Estilos regulares */
-  border: 8px solid #7D2181;
-  padding: 10px;
-  background-color: #7D2181;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
-
-.boton3:hover {
-  background-color: #924E7D; /* Cambia el color al pasar el cursor */
-}
-.boton4 {
-  /* Estilos regulares */
-  border: 8px solid #1c542d;
-  padding: 10px;
-  background-color: #1c542d;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
-
-.boton4:hover {
-  background-color: #2a623b; /* Cambia el color al pasar el cursor */
-}
-/* Estilo para el tabla */
-#columna2 {
-    float: right;
-    width: 75%;
-    background-color: rgba(160, 160, 160, 0.5); /* Cambia el color y la opacidad según tus preferencias */
-    padding: 10px;
+  .card-link{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 12px;
+    background: var(--panel-soft);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--c-seguridad);
     border-radius: 10px;
-    margin-top: 10px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 2.0);
-}
+    padding: 16px 18px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 1.35;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .card-link:hover{
+    background: var(--c-seguridad-soft);
+    transform: translateY(-2px);
+  }
+  .card-link .arrow{
+    flex-shrink:0;
+    opacity: 0.55;
+    width: 16px; height:16px;
+  }
+  .card-link:hover .arrow{ opacity: 1; }
 
+  footer{
+    text-align:center;
+    color: var(--ink-dim);
+    font-size: 12px;
+    padding: 10px 0 4px;
+  }
 
+  .watermark{
+    text-align:center;
+    color: rgba(255,255,255,0.35);
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    padding-bottom: 22px;
+  }
 
-.boton5 {
-  /* Estilos regulares */
-  border: 8px solid #ff0080;
-  padding: 10px;
-  background-color: #ff0080;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
-
-.boton5:hover {
-  background-color: #ec53a0; /* Cambia el color al pasar el cursor */
-}
-/* Estilo para el tabla */
-#columna2 {
-    float: right;
-    width: 75%;
-    background-color: rgba(160, 160, 160, 0.5); /* Cambia el color y la opacidad según tus preferencias */
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 2.0);
-}
-
-
-
-table {
-  width: 50%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-th, td {
-  padding: 5px;
-}
-
-th {
-  background-color: BLUE;
-  color:;
-}
-
-td {
-  background-color: BLUE;
-  color:;
-}
-
-
-/* Estilo para el menú */
-#menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 300px;
-  background-image: 
-  padding: 10px;
-  border-radius: 0px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: width 0.3s ease;
-}
-
-#menu.collapsed {
-  width: 50px;
-}
-
-#menu a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-#menu a:hover {
-  background-color: #4567a8;
-}
-
-
-#columna1 {
-    float: left;
-    width: 75%;
-    background-color: rgba(0, 0, 0, 0); /* Cambia el color y la opacidad según tus preferencias */
-    padding: 0px;
-    border-radius: 0px;
-    margin-top: 0px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-
-.centrado{text-align:center;border:1px dotted #0000; padding:8px;}
-		div{width:50%;border:1px dotted #f000;padding:8px;margin:auto;}
-		center{margin:16px 0;}
-
-.centrado1{text-align:left;border:1px dotted #0000; padding:30px;}
-		div{width:50%;border:1px dotted #f000;padding:40px;margin:auto;}
-		center{margin:16px 3;}
-		
-		
-	</style>
-	
+  @media (max-width: 600px){
+    header{ padding: 12px 16px; }
+  }
+</style>
 </head>
 
-<body style="background-image: url(https://iphoneros.com/wp-content/uploads/2015/02/azul_abstracto_ordenador_iphoneroscom.jpg) ; color: #efefef ; ">
-	
-<header><img src="https://appcita.viva1a.com.co:8051/citasweb/assets/img/logoViva.png"></header>
+<body>
 
-	
-	<div id="columna1">
-	
-<h1 style="color: #FA00FA">
-	<span style="color: #FFFFFF;">
-	<p class="centrado" >LINKS SEGURIDAD DEL PACIENTE</p> 
-	</span> 
-		</h1>
-	
-	
-<ol style="list-style: none; font-size: 14px; line-height: 32px; font-weight: bold;">
+<header>
+  <img src="https://appcita.viva1a.com.co:8051/citasweb/assets/img/logoViva.png" alt="Viva1A IPS">
+  <span class="tag">Seguridad del paciente</span>
+</header>
 
-	<a class="boton" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=S6q48XMM30ySUZubC9zVp-nqrrGNgSlLvHS057gXxCRUMDYwUU1CUjdBVE9YTkM3MUVUOU1HSVFIRi4u&route=shorturl" target="_blank">Herramienta de Reportes</a>
-	
-	<a class="boton" href="https://forms.cloud.microsoft/r/HB1giE70f2" target="_blank">Herramienta de Investigacion</a>
+<div class="wrap">
 
-	<a class="boton" href="https://forms.cloud.microsoft/r/bV7CMcJSq5" target="_blank">Herramienta de Analisis</a>
-	
-	
-	<br>
-	<br>
-	
-	<a class="boton" href="https://forms.cloud.microsoft/r/SUzkzfTfDj" target="_blank">Herramienta de Indentificacion de riesgos asociados a la seguridad del paciente</a>
-	
-	
-	<br>
-	<br>
+  <h1 class="page-title">Links <span>Seguridad del paciente</span></h1>
+  <p class="page-sub">Herramientas de reporte, investigación y análisis de riesgos asociados a la seguridad del paciente.</p>
 
-	<a class="boton" href="https://forms.cloud.microsoft/r/8R0q6hwyf2" target="_blank">Registros de casos analizados  de identificacion de riesgos asociados a la seguridad del paciente</a>
+  <section class="category">
+    <div class="cat-head">
+      <div class="cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+      </div>
+      <h2>Herramientas</h2>
+    </div>
+    <div class="grid">
+      <a class="card-link" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=S6q48XMM30ySUZubC9zVp-nqrrGNgSlLvHS057gXxCRUMDYwUU1CUjdBVE9YTkM3MUVUOU1HSVFIRi4u&route=shorturl" target="_blank">
+        Herramienta de reportes
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a class="card-link" href="https://forms.cloud.microsoft/r/HB1giE70f2" target="_blank">
+        Herramienta de investigación
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a class="card-link" href="https://forms.cloud.microsoft/r/bV7CMcJSq5" target="_blank">
+        Herramienta de análisis
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a class="card-link" href="https://forms.cloud.microsoft/r/SUzkzfTfDj" target="_blank">
+        Herramienta de identificación de riesgos asociados a la seguridad del paciente
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a class="card-link" href="https://forms.cloud.microsoft/r/8R0q6hwyf2" target="_blank">
+        Registros de casos analizados de identificación de riesgos asociados a la seguridad del paciente
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </section>
 
-<br>
-<!-- -->
-
-</ol>
-		
-		</div>
-
-	<!-- 
-
-<div id="menu">
-
-
-<h1 style="color: #FA00FA">
-	<span style="color: #FFFFFF;">
-	<p class="centrado1" >CONTRASEÑAS</p> 
-	</span> 
-		</h1>
-
-<div id="columna2">
-  <table>
-    <tr>
-      <th colspan="2">USUARIO LAB ATHENEA</th>
-    </tr>
-    <tr>
-      <th>USUARIO</th>
-      <th>CONTRASEÑA</th>
-    </tr>
-    <tr>
-      <td>CONSULTAMED</td>
-      <td>Viva1a*md04</td>
-    </tr>
-  </table>
 </div>
 
-<div id="columna2">
-  <table>
-    <tr>
-      <th colspan="2">MESA DE SERVICIO</th>
-    </tr>
-    <tr>
-      <th>USUARIO</th>
-      <th>CONTRASEÑA</th>
-    </tr>
-    <tr>
-      <td>medicos.cambulos</td>
-      <td>VIVA2023</td>
-    </tr>
-  </table>
-</div>
+<footer>Viva1A IPS — portal interno de accesos</footer>
+<div class="watermark">Elaborado por Pablo Robayo</div>
 
-<div id="columna2">
-  <table>
-    <tr>
-      <th colspan="2">USUARIO LUMIER</th>
-    </tr>
-    <tr>
-      <th>USUARIO</th>
-      <th>CONTRASEÑA</th>
-    </tr>
-    <tr>
-      <td>PREMIUM</td>
-      <td>123456</td>
-    </tr>
-  </table>
-</div>
-
-<div id="columna2">
-  <table>
-    <tr>
-      <th colspan="2">USUARIO ANNARLYTICS</th>
-    </tr>
-    <tr>
-      <th>USUARIO</th>
-      <th>CONTRASEÑA</th>
-    </tr>
-    <tr>
-      <td>CONSULTA</td>
-      <td>123456</td>
-    </tr>
-  </table>
-</div>
-
-
-<div id="columna2">
-  <table>
-<tr>
-      <th colspan="2">CORREO OUTLOOK</th>
-    </tr>
-    <tr>
-      <th colspan="2">medicos.cambulos@outlook.com</th>
-    </tr>
-    <tr>
-     <th colspan="2">Viva1a2026</th>
-    </tr>
-  </table>
-</div>
-
-
-<div id="columna2">
-  <table>
-<tr>
-      <th colspan="2">CORREO GMAIL</th>
-    </tr>
-    <tr>
-      <th colspan="2">medico.viva1a.cali@gmail.com</th>
-    </tr>
-    <tr>
-     <th colspan="2">Viva1a2020</th>
-    </tr>
-  </table>
--->
-</div>
-</div>
 </body>
-
 </html>
